@@ -60,14 +60,14 @@ function isAlreadyAttracted(){
  
 function trackRef(){
   let arr = params.split('');
-  if((arr[1]=='')&&(arr[0])){
-    // it is affiliated by another user
-    let userId=arr[0];
-    setReferralByAnotherUser(userId);
-  }else{
+  if((arr[0]=='')&&(arr[1])){
     let channel = params;
     User.setProperty('REFLIB_attracted_by_channel', channel, 'string');
     emitEvent('onAttracted', channel);
+  }else{
+       // it is affiliated by another user
+    let userId=arr[0];
+    setReferralByAnotherUser(userId);
   }
 }
  
