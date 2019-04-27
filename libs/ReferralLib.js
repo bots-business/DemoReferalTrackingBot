@@ -32,7 +32,7 @@ function saveActiveUsers(userKey, refUser){
 }
  
 function setReferralByAnotherUser(userId){
-  let userKey = 'REFLIB' + userId;
+  let userKey = 'REFLIB_dbly' + userId;
   // it is for secure reason. User can pass any params to start!
   let refUser = Bot.getProperty(userKey);
  
@@ -59,17 +59,15 @@ function isAlreadyAttracted(){
 }
  
 function trackRef(){
-  let arr = params.split('');
+  let arr = params.split('dbly');
   if((arr[0]=='')&&(arr[1])){
     // it is affiliated by another user
-    let userId=arr[0];
+    let userId=arr[1];
     setReferralByAnotherUser(userId);
-   }else{
+  }else{
     let channel = params;
     User.setProperty('REFLIB_attracted_by_channel', channel, 'string');
     emitEvent('onAttracted', channel);
-  
-
   }
 }
  
@@ -112,7 +110,7 @@ function clearTopList(){
 }
  
 function getRefList(){
-  let refList = Bot.getProperty('REFLIB_refList' + user.telegramid);
+  let refList = Bot.getProperty('REFLIB_refList' + user.id);
   result = []
   if((refList)&&(refList.count>0)){
     result = refList.users;
@@ -121,7 +119,7 @@ function getRefList(){
 }
  
 function clearRefList(){
-  propName = 'REFLIB_refList' + user.telegramid;
+  propName = 'REFLIB_refList' + user.id;
   Bot.setProperty(propName, { users:[], count:0 }, 'json');
   return true;
 }
@@ -136,9 +134,9 @@ function attractedByChannel(){
  
 function getRefLink(botName){
   let aff_link='https://t.me/' + botName + 
-    '?start=' + user.telegramid;
+    '?start=dbly' + user.id;
  
-  let userKey = user.telegramid;
+  let userKey = 'dbly' + user.id;
   user.chatId = chat.chatid;
   Bot.setProperty('REFLIB_' + userKey, user, 'json');
   return aff_link;
