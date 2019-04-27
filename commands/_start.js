@@ -17,9 +17,6 @@ Clear Ref List: /clear
 *TOP*
 Get TOP 10: /top
 Clear Top: /cleartop
-
-
-
   ANSWER
   keyboard: 
   aliases: 
@@ -63,6 +60,3 @@ let trackOptions = {
 }
 
 Libs.ReferralLib.currentUser.track(trackOptions);
-
-
-

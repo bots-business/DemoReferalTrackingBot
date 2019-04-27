@@ -23,5 +23,3 @@ if(refList.length>0){
   msg = "No any affiliated users";
 }
 Bot.sendMessage(msg);
-
-

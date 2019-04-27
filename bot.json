@@ -1,6 +1,6 @@
 {
   "bb_sync_version":"1.0",
-  "name":"DemoReferalTrackingBot",
-  "git_remote":"git@github.com:bots-business/DemoReferalTrackingBot.git",
+  "name":"MechanicRobot",
+  "git_remote":"git@github.com:adams1992/DemoReferalTrackingBot.git",
   "csv_url":null
 }
