@@ -32,7 +32,7 @@ function saveActiveUsers(userKey, refUser){
 }
 
 function setReferralByAnotherUser(userId){
-  let userKey = 'REFLIB_user' + userId;
+  let userKey = 'REFLIB' + userId;
   // it is for secure reason. User can pass any params to start!
   let refUser = Bot.getProperty(userKey);
 
@@ -131,7 +131,7 @@ function attractedByChannel(){
 }
 
 function getRefLink(botName){
-  let aff_link='https://telegram.me/' + botName + 
+  let aff_link='https://t.me/' + botName + 
     '?start=' + user.telegramid;
 
   let userKey = user.telegramid;
