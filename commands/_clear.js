@@ -3,10 +3,7 @@
   help: clear Referal List
   need_reply: 
   auto_retry_time: 
-
-  <<ANSWER
-
-  ANSWER
+  answer: 
   keyboard: 
   aliases: 
 CMD*/

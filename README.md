@@ -1,11 +1,5 @@
-# DemoReferalTrackingBot - chat bot
-It is repository for chat bot: [@DemoReferalTrackingBot](https://t.me/DemoReferalTrackingBot)
-
-You can give to users a link to the bot with params. This will allow you to track referral links.
-
-![](https://i.imgur.com/8wmJAyn.jpg)
-
-
+# MechanicRobot - chat bot
+It is repository for chat bot: [@MechanicRobot](https://t.me/MechanicRobot)
 
 ## What it is?
 This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
