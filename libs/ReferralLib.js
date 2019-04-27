@@ -32,7 +32,7 @@ function saveActiveUsers(userKey, refUser){
 }
  
 function setReferralByAnotherUser(userId){
-  let userKey = 'REFLIB_' + userId;
+  let userKey = 'REFLIB' + userId;
   // it is for secure reason. User can pass any params to start!
   let refUser = Bot.getProperty(userKey);
  
